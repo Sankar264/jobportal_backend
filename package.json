@@ -1,26 +1,11 @@
 {
-  "name": "jobportal",
-  "private": true,
+  "name": "job-portal-backend",
   "version": "1.0.0",
-  "type": "module",
+  "private": true,
   "scripts": {
-    "dev": "vite",
-    "server": "node server/index.js",
-    "serve": "node server/index.js",
-    "build": "vite build",
-    "start": "concurrently \"npm:server\" \"npm:dev\""
+    "start": "json-server --watch db.json --host 0.0.0.0 --port $PORT"
   },
   "dependencies": {
-    "axios": "^1.7.0",
-    "pdfjs-dist": "^4.10.38",
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1",
-    "react-router-dom": "^6.26.0",
-    "json-server": "^0.17.4"
-  },
-  "devDependencies": {
-    "@vitejs/plugin-react": "^4.3.0",
-    "concurrently": "^10.0.5",
-    "vite": "^5.4.0"
+    "json-server": "0.17.4"
   }
 }
